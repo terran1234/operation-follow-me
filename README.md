@@ -5,7 +5,7 @@
 - 기간: 2026.07.23 ~ 2026.08.04 (이스트캠프 가디언즈 인프라보안 10기 최종 프로젝트)
 - 팀: 8팀 "팔로팔로미", 5인
 - 결과: 최종 프로젝트 1위 · 우수상
-- 내 역할: **서비스 인프라** (웹·DB 서버 구축, 취약점 설계, DNS, WAF 룰, DB 백업·복구, 발표)
+- 내 역할: **서비스 인프라** (웹·DB 서버 구축, pfSense 이중화(HA), 취약점 설계, DNS, WAF 룰, DB 백업·복구, 발표)
 
 ## 배경
 
@@ -41,6 +41,7 @@
 | 영역 | 내용 | 문서 |
 |---|---|---|
 | 서비스 구축 | 웹서버, DB(13개 테이블, 최소 권한 계정), DNS(BIND9, `fm8plus.com`) | [docs/service.md](docs/service.md) |
+| pfSense 이중화 | CARP 기반 HA 구성(Active/Standby), 설정 동기화, 장애 시 자동 승계 검증 | [docs/pfsense-ha.md](docs/pfsense-ha.md) |
 | 취약점 설계 | 모의해킹용 취약점 4종을 의도대로 설계 | [docs/vulnerability-design.md](docs/vulnerability-design.md) |
 | WAF 룰 | ModSecurity 커스텀 룰 3개 작성·검증 | [docs/waf.md](docs/waf.md) |
 | Suricata | WAN 룰 10개 적용·테스트, alert → 선별 drop 전환 | [docs/suricata.md](docs/suricata.md) |
